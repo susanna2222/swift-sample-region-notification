@@ -16,11 +16,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        // setup Map View
+        // setup Map View on User Location
         let noLocation = CLLocationCoordinate2D()
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         let viewRegion = MKCoordinateRegion(center: noLocation, span: span)
         
         mapView.delegate = self
@@ -33,34 +32,31 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func setupMapView(){
         
-        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
-            
-            var annotationList = [MKPointAnnotation]()
-            var circleList = [MKCircle]()
-            
-            let locationName = "Tokyo Tower"
-            let coordiate = CLLocationCoordinate2DMake(35.658626, 139.745471)
-            
-            // setup annotation
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordiate
-            annotation.title = locationName
-            
-            annotationList.append(annotation)
-            
-            // setup circle
-            let circle = MKCircle(center: coordiate, radius: 50)
-            circleList.append(circle)
-            
-            // add to map view
-            mapView.addAnnotations([annotation])
-            mapView.addOverlays([circle])
-        }
+        var annotationList = [MKPointAnnotation]()
+        var circleList = [MKCircle]()
+        
+        let locationName = "Tokyo Tower"
+        let coordiate = CLLocationCoordinate2DMake(35.658626, 139.745471)
+        
+        // setup annotation
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordiate
+        annotation.title = locationName
+        
+        annotationList.append(annotation)
+        
+        // setup circle
+        let circle = MKCircle(center: coordiate, radius: 50)
+        circleList.append(circle)
+        
+        // add to map view
+        mapView.addAnnotations([annotation])
+        mapView.addOverlays([circle])
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         let region = MKCoordinateRegion(center: userLocation.coordinate, span: span)
         mapView.region = region
     }

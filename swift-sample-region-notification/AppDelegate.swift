@@ -96,9 +96,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         // setup notification content
         let content = UNMutableNotificationContent()
-        content.title = "Title"
-        content.subtitle = "SubTitle"
-        content.body = "Body"
+        content.title = "Tokyo Tower"
+        content.body = "Welcome to Tokyo Tower, A symbol of Japan's post-war rebirth as a major economic power!"
         content.badge = 0
         content.sound = UNNotificationSound.default
         
@@ -125,7 +124,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         })
     }
     
-    //
     func isAllowReceiveNotification() -> Bool{
         
         var isAllow = true

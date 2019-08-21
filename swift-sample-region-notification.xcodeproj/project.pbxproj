@@ -14,6 +14,7 @@
 		9A1959D6230BAB23007F5262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1959D4230BAB23007F5262 /* LaunchScreen.storyboard */; };
 		9A1959DF230BAB32007F5262 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1959DE230BAB32007F5262 /* CoreLocation.framework */; };
 		9A1959E1230BAB38007F5262 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1959E0230BAB38007F5262 /* UserNotifications.framework */; };
+		9A1959E8230D0C72007F5262 /* Tokyo Tower.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A1959E7230D0C72007F5262 /* Tokyo Tower.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9A1959DE230BAB32007F5262 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9A1959E0230BAB38007F5262 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		9A1959E6230BDA63007F5262 /* Roppongi Midtown.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Roppongi Midtown.gpx"; path = "../../../Desktop/Roppongi Midtown.gpx"; sourceTree = "<group>"; };
+		9A1959E7230D0C72007F5262 /* Tokyo Tower.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Tokyo Tower.gpx"; path = "../../../Desktop/Tokyo Tower.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		9A1959E4230BDA44007F5262 /* GPS Location */ = {
 			isa = PBXGroup;
 			children = (
+				9A1959E7230D0C72007F5262 /* Tokyo Tower.gpx */,
 				9A1959E6230BDA63007F5262 /* Roppongi Midtown.gpx */,
 			);
 			path = "GPS Location";
@@ -156,6 +159,7 @@
 				9A1959D6230BAB23007F5262 /* LaunchScreen.storyboard in Resources */,
 				9A1959D3230BAB23007F5262 /* Assets.xcassets in Resources */,
 				9A1959D1230BAB22007F5262 /* Main.storyboard in Resources */,
+				9A1959E8230D0C72007F5262 /* Tokyo Tower.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
