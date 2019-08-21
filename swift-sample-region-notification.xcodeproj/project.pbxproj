@@ -12,6 +12,8 @@
 		9A1959D1230BAB22007F5262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1959CF230BAB22007F5262 /* Main.storyboard */; };
 		9A1959D3230BAB23007F5262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1959D2230BAB23007F5262 /* Assets.xcassets */; };
 		9A1959D6230BAB23007F5262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1959D4230BAB23007F5262 /* LaunchScreen.storyboard */; };
+		9A1959DF230BAB32007F5262 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1959DE230BAB32007F5262 /* CoreLocation.framework */; };
+		9A1959E1230BAB38007F5262 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1959E0230BAB38007F5262 /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		9A1959D2230BAB23007F5262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A1959D5230BAB23007F5262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A1959D7230BAB23007F5262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1959DE230BAB32007F5262 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9A1959E0230BAB38007F5262 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		9A1959E6230BDA63007F5262 /* Roppongi Midtown.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Roppongi Midtown.gpx"; path = "../../../Desktop/Roppongi Midtown.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A1959E1230BAB38007F5262 /* UserNotifications.framework in Frameworks */,
+				9A1959DF230BAB32007F5262 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +46,9 @@
 			isa = PBXGroup;
 			children = (
 				9A1959CA230BAB22007F5262 /* swift-sample-region-notification */,
+				9A1959E4230BDA44007F5262 /* GPS Location */,
 				9A1959C9230BAB22007F5262 /* Products */,
+				9A1959DD230BAB32007F5262 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +71,23 @@
 				9A1959D7230BAB23007F5262 /* Info.plist */,
 			);
 			path = "swift-sample-region-notification";
+			sourceTree = "<group>";
+		};
+		9A1959DD230BAB32007F5262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A1959E0230BAB38007F5262 /* UserNotifications.framework */,
+				9A1959DE230BAB32007F5262 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A1959E4230BDA44007F5262 /* GPS Location */ = {
+			isa = PBXGroup;
+			children = (
+				9A1959E6230BDA63007F5262 /* Roppongi Midtown.gpx */,
+			);
+			path = "GPS Location";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +122,11 @@
 				TargetAttributes = {
 					9A1959C7230BAB22007F5262 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
