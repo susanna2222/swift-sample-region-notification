@@ -13,5 +13,5 @@ You can download the sample project by using git and below command.
 
 ```git clone https://github.com/susanna2222/gcpsg.git```
 
-## For more details 
+## Step by Step Guidelines 
 Please refer to the article : [Link](https://medium.com/@susanna2222/swift-a-sample-app-to-send-notification-by-region-f706b69d7f27)
